@@ -3,18 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>The Lattice Development | Proto-Prime Parent Entity</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #f4f4f4; color: #333; text-align: center; }
-        .container { padding: 20px; }
-        h1 { font-size: 3rem; margin-bottom: 10px; }
-        p { font-size: 1.2rem; }
+        :root {
+            --bg: #050505;
+            --fg: #ffffff;
+            --dim: #666666;
+            --border: rgba(255,255,255,0.1);
+        }
+
+        body, html {
+            margin: 0; padding: 0; height: 100%;
+            background: var(--bg); color: var(--fg);
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            overflow: hidden;
+        }
+
+        .lattice-bg {
+            position: absolute; width: 100%; height: 100%;
+            background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                              linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+            z-index: 0;
+        }
+
+        .content {
+            z-index: 1; text-align: center; max-width: 700px; padding: 40px;
+        }
+
+        .label {
+            font-size: 0.75rem; letter-spacing: 0.4rem; text-transform: uppercase;
+            color: var(--dim); margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 3rem; font-weight: 300; margin: 0;
+            letter-spacing: -0.02rem; line-height: 1.1;
+        }
+
+        p {
+            font-size: 1.1rem; color: var(--dim); line-height: 1.6;
+            margin: 2rem 0; font-weight: 300;
+        }
+
+        .link-container {
+            margin-top: 3rem; padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        a {
+            color: var(--fg); text-decoration: none; font-size: 0.8rem;
+            letter-spacing: 0.1rem; text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        a:hover { color: var(--dim); }
+
+        .status {
+            position: absolute; bottom: 40px; font-size: 0.65rem;
+            color: var(--dim); text-transform: uppercase; letter-spacing: 0.2rem;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Under Construction</h1>
-        <p>Something exciting is coming soon. Please check back later!</p>
+    <div class="lattice-bg"></div>
+    
+    <div class="content">
+        <div class="label">Parent Entity</div>
+        <h1>The Lattice Development</h1>
+        <p>
+            A GICS-mapped proto-prime contractor startup. <br>
+            Operating as the structural parent and lattice for a coordinated network of high-technology corporations and advanced development initiatives.
+        </p>
+
+        <div class="link-container">
+            <a href="https://igne.dev">Strategic Asset: Black Flag Discovery (Aerospace) &rarr;</a>
+        </div>
     </div>
+
+    <div class="status">System Status: Mapping // 2026</div>
 </body>
 </html>
